@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- styles -->
     <link rel="stylesheet" href="./style/style.css" />
     <!-- insert bootstrap link -->
@@ -11,6 +12,22 @@
     <title>Rock Paper Scissor</title>
   </head>
   <body>
+    <div class="sec1 text-center text-white p-4">Rock Paper Scissor</div>
+    <div class="sec1 text-center text-white">you</div>
+    <div class="sec1 text-center text-white">you</div>
+    <div class="d-flex flex-row justify-content-center images">
+      <img src="assets/images/paper 1.svg" alt="paper">
+      <img src="assets/images/two 1.svg" alt="two">
+      <img src="assets/images/rock 1.svg" alt="rock">
+    </div>
+    <form class="d-flex flex-row justify-content-center p-4 sec2">
+      <input type="radio" name="fa" class="paper"/>
+      <input type="radio" name="fa" class="two"/>
+      <input type="radio" name="fa" class="rock"/>
+    </form>
+    <div class="d-flex justify-content-center">
+      <button type="submit" class="submit rounded-4 text-white">PLAY AGAIN</button>
+    </div>
     <!-- scripts -->
     <script src="./script/main.js"></script>
   </body>
