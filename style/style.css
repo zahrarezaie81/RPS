@@ -1,5 +1,6 @@
 :root {
   --purpule: #3B2A9F;
+  --white : #ffffff;
 }
 
 *{
@@ -7,14 +8,16 @@
   font-family: Poppins;
 }
 body{
-  background-color:#3B2A9F;
+  background-color:var(--purpule);
 }
 .sec1{
   font-size: 36px;
   font-weight: 700;
-  height: 80px;
+  height: 100px;
 }
-
+#result{
+  color: var(--white);
+}
 .images{
   gap: 100px;
 }
