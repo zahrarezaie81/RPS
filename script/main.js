@@ -1,15 +1,37 @@
 const restart = document.querySelector('.submit');
 const result = document.getElementById('result');
-restart.addEventListener('click',()=>{
-	restart.innerText = 'PLAY AGAIN';
-	result.innerText = 'DRAW';
-	game();
-	restart.addEventListener('click', () => {
-		window.location.reload();
+const twoPlayer = document.getElementById('twoplayer');
+const onePlayer = document.getElementById('oneplayer');
+const player_Ai = document.getElementById('player-ai');
+const buttons = document.querySelector('.buttons');
+
+onePlayer.addEventListener('click',() =>{
+	onePlayer.style.display = "none";
+	twoPlayer.style.display = "none";
+	buttons.style.display = "none";
+	player_Ai.style.display = "block";
+	restart.addEventListener('click',()=>{
+		restart.innerText = 'PLAY AGAIN';
+		result.innerText = 'DRAW';
+		game();
+		restart.addEventListener('click', () => {
+			window.location.reload();
+		})
 	})
 })
 
-
+twoPlayer.addEventListener('click',() =>{
+	buttons.style.display = "none";
+	player_Ai.style.display = "block";
+	restart.addEventListener('click',()=>{
+		restart.innerText = 'PLAY AGAIN';
+		result.innerText = 'DRAW';
+		game();
+		restart.addEventListener('click', () => {
+			window.location.reload();
+		})
+	})
+})
 
 const game = () =>{
     let copmuter_score = 0;
