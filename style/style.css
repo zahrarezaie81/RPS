@@ -74,3 +74,51 @@ body{
   font-size: 24px;
   font-weight: 700;
 }
+#player-player{
+  display: none;
+  width: 100%;
+}
+.submit2{
+  width: 252px;
+  height: 64px;
+  border: 3px solid white;
+  background-color: var(--purpule);
+  font-size: 36px;
+  font-weight: 700;
+  display: none;
+}
+.images1{
+  width: fit-content;
+  margin-top: 100px;
+}
+#score{
+  display: none;
+  margin-top: 50px;
+  font-size: 24px;
+  font-weight: 600;
+}
+.resultBoard{
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 50px;
+  gap: 800px;
+}
+#result1{
+  display: none;
+}
+#result2{
+  display: none;
+}
+#report1{
+  display: none;
+}
+#report2{
+  display: none;
+}
+.reportBoard{
+  font-size: 24px;
+  font-weight: 600;
+  gap: 750px;
+  margin-top: 50px;
+  color: rgb(255, 136, 0);
+}
