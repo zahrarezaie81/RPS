@@ -55,7 +55,7 @@ const game1player = () =>{
     const paper = document.querySelector('.paper');
     const scissor = document.querySelector('.scissor');
     const user_action = [rock, paper, scissor];
-    const computer_action = ['rock', 'paper', 'scissors'];
+    const computer_action = ['rock', 'paper', 'scissor'];
     const playGame = () =>{
         user_action.forEach(action => {
 			action.addEventListener('click', () => {
@@ -72,57 +72,34 @@ const game1player = () =>{
 		const playerScoreBoard = document.querySelector('.user-score');
 		const computerScoreBoard = document.querySelector('.computer-score');
         const report = document.querySelector('.report');
-		if(user = computer){
+		if (
+			(user === 'rock' && computer === 'scissor') ||
+			(user === 'paper' && computer === 'rock') ||
+			(user === 'scissor' && computer === 'paper')
+		) {
+			result.innerText = 'You Won!';
+			result.style.color = "green";
+            report.textContent = 'computer choosed '+computer;
+			user_score++;
+		    playerScoreBoard.textContent = user_score.toString();
+			
+		} else if (
+			(user === 'rock' && computer === 'paper') ||
+			(user === 'paper' && computer === 'scissor') ||
+			(user === 'scissor' && computer === 'rock')
+		) {
+			result.innerText = 'You Lost!';
+			result.style.color = "red";
+            report.textContent = 'computer choosed '+computer;
+			copmuter_score++;
+			computerScoreBoard.textContent = copmuter_score.toString();
+		} else{
 			result.innerText = 'Tie!';
 			result.style.color = 'yellow';
-			report.textContent = 'computer choosed '+computer;
+			report.textContent = 'computer choosed '+user;
 		}
-		else if (user == 'rock') {
-			if (computer == 'paper') {
-				result.innerText = 'You Lost!';
-				result.style.color = "red";
-                report.textContent = 'computer choosed paper'
-				copmuter_score++;
-				computerScoreBoard.textContent = copmuter_score.toString();
 
-			} else {
-				result.innerText = 'You Won!'
-				result.style.color = "green";
-                report.textContent = 'computer choosed scissor'
-				user_score++;
-				playerScoreBoard.textContent = user_score.toString();
-			}
-		}
-		else if (user == 'scissor') {
-			if (computer == 'rock') {
-				result.innerText = 'You Lost!';
-				result.style.color = "red";
-                report.textContent = 'computer choosed rock'
-				copmuter_score++;
-				computerScoreBoard.textContent = copmuter_score.toString();
-			} else {
-				result.innerText = 'You Won!';
-				result.style.color = "green";
-                report.textContent = 'computer choosed paper'
-				user_score++;
-				playerScoreBoard.textContent = user_score.toString();
-			}
-		}
-		else if (user == 'paper') {
-			if (computer == 'scissors') {
-				result.innerText = 'You Lost!';
-				result.style.color = "red";
-                report.textContent = 'computer choosed scissor'
-				copmuter_score++;
-				computerScoreBoard.textContent = copmuter_score.toString();
-			} else {
-				result.innerText = 'You Won!';
-				result.style.color = "green";
-                report.textContent = 'computer choosed rock'
-				user_score++;
-				playerScoreBoard.textContent = user_score.toString();
-			}
-		}
+
 	}
 	playGame();   
 }
