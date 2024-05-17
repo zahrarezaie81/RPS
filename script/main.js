@@ -72,9 +72,12 @@ const game1player = () =>{
 		const playerScoreBoard = document.querySelector('.user-score');
 		const computerScoreBoard = document.querySelector('.computer-score');
         const report = document.querySelector('.report');
-
-
-		if (user == 'rock') {
+		if(user = computer){
+			result.innerText = 'Tie!';
+			result.style.color = 'yellow';
+			report.textContent = 'computer choosed '+computer;
+		}
+		else if (user == 'rock') {
 			if (computer == 'paper') {
 				result.innerText = 'You Lost!';
 				result.style.color = "red";
@@ -168,7 +171,14 @@ function determineWinner() {
 		report2.innerText = "choose "+player2Action;
         player2Score++;
         user2score.textContent = player2Score.toString();
-    } 
+    } else{
+		resul2player.innerText = 'Tie!';
+		resul1player.innerText = 'Tie!';
+		resul2player.style.color = "yellow";
+		resul1player.style.color = "yellow";
+		report1.innerText = "choose "+player1Action;
+		report2.innerText = "choose "+player2Action;
+	}
     player1Action = null;
     player2Action = null;
 }
